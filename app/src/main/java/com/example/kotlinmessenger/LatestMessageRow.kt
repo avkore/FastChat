@@ -18,6 +18,7 @@ class LatestMessageRow(val chatMessage: ChatMessage): Item<ViewHolder>() {
         viewHolder.itemView.message_textview_latest_message.text = chatMessage.text
 
         val chatPartnerId: String
+//        უზერების გარჩევა(რომელი რომელია)
         if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
             chatPartnerId = chatMessage.toId
         } else {
@@ -28,8 +29,9 @@ class LatestMessageRow(val chatMessage: ChatMessage): Item<ViewHolder>() {
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 chatPartnerUser = p0.getValue(User::class.java)
+//                სახელის დასეტვა
                 viewHolder.itemView.username_textview_latest_message.text = chatPartnerUser?.username
-
+//                ფოტოს დასეტვა
                 val targetImageView = viewHolder.itemView.imageview_latest_message
                 Picasso.get().load(chatPartnerUser?.profileImageUrl).into(targetImageView)
             }

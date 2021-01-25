@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.chat_to_row.view.*
 class ChatFromItem(val text: String, val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.textview_from_row.text = text
-
+        //ფოტოს ჩატვირთვა უზერის იმეიჯში
         val uri = user.profileImageUrl
         val targetImageView = viewHolder.itemView.imageview_chat_from_row
         Picasso.get().load(uri).into(targetImageView)
@@ -24,8 +24,7 @@ class ChatFromItem(val text: String, val user: User): Item<ViewHolder>() {
 class ChatToItem(val text: String, val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.textview_to_row.text = text
-
-        // load our user image into the star
+        //ფოტოს ჩატვირთვა უზერის იმეიჯში
         val uri = user.profileImageUrl
         val targetImageView = viewHolder.itemView.imageview_chat_to_row
         Picasso.get().load(uri).into(targetImageView)

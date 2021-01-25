@@ -13,10 +13,10 @@ class LoginActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+//      ბარის დამალვა
         supportActionBar?.hide()
 
-        login_button_login.setOnClickListener {
+        login_button.setOnClickListener {
             performLogin()
         }
 
@@ -37,7 +37,7 @@ class LoginActivity: AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (!it.isSuccessful) return@addOnCompleteListener
-
+// ლოგქეთისთვის
                 Log.d("Login", "Successfully logged in: ${it.result?.user?.uid}")
 
                 val intent = Intent(this, LatestMessagesActivity::class.java)

@@ -25,12 +25,14 @@ class LatestMessagesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
 
+        supportActionBar?.title = ""
+
         recyclerview_latest_messages.adapter = adapter
+//        პატარა ხაზი გასაყოფად
         recyclerview_latest_messages.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        // set item click listener on your adapter
+//        ადაპტერის აითემზე ლისენერის დადება
         adapter.setOnItemClickListener { item, view ->
-            Log.d(TAG, "123")
             val intent = Intent(this, ChatLogActivity::class.java)
 
             val row = item as LatestMessageRow
@@ -44,7 +46,7 @@ class LatestMessagesActivity : AppCompatActivity() {
 
         verifyUserIsLoggedIn()
     }
-
+// ეს ნაწილი ცოტა ვერ გავიგე
     val latestMessagesMap = HashMap<String, ChatMessage>()
 
     private fun refreshRecyclerViewMessages() {

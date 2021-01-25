@@ -25,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
 
-        register_button_register.setOnClickListener {
+        register_button.setOnClickListener {
             performRegister()
         }
 
@@ -34,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        selectphoto_button_register.setOnClickListener {
+        selectphoto_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, 0)
@@ -56,7 +56,7 @@ class RegisterActivity : AppCompatActivity() {
 
             selectphoto_imageview_register.setImageBitmap(bitmap)
 
-            selectphoto_button_register.alpha = 0f
+            selectphoto_button.alpha = 0f
 
         }
     }

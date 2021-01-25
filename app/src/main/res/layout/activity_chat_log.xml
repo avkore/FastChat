@@ -21,11 +21,11 @@
         android:background="@android:color/white"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
+        app:layout_constraintEnd_toStartOf="@+id/send_button"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/send_button_chat_log"
+        android:id="@+id/send_button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"

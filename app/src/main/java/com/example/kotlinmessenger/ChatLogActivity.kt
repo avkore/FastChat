@@ -31,12 +31,12 @@ class ChatLogActivity : AppCompatActivity() {
         recyclerview_chat_log.adapter = adapter
 
         toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
-
+        //ბარზე უზერის სახელის დატანა
         supportActionBar?.title = toUser?.username
 
         listenForMessages()
 
-        send_button_chat_log.setOnClickListener {
+        send_button.setOnClickListener {
             performSendMessage()
         }
     }
@@ -87,7 +87,7 @@ class ChatLogActivity : AppCompatActivity() {
     }
 
     private fun performSendMessage() {
-        // how do we actually send a message to firebase...
+        // მესიჯის გაგზავნა
         val text = edittext_chat_log.text.toString()
 
         val fromId = FirebaseAuth.getInstance().uid
@@ -99,7 +99,7 @@ class ChatLogActivity : AppCompatActivity() {
         val reference = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
 
         val toReference = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
-
+//      ასე რატო გადააკეთდა?????
         val chatMessage = toId?.let {
             ChatMessage(reference.key!!, text, fromId,
                 it, System.currentTimeMillis() / 1000)
@@ -109,11 +109,12 @@ class ChatLogActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Log.d(TAG, "Saved our chat message: ${reference.key}")
                 edittext_chat_log.text.clear()
+//              ჩათი რომ მუდმივად დაბლა იყოს და სქროლვა არ დაგვჭირდეს
                 recyclerview_chat_log.scrollToPosition(adapter.itemCount - 1)
             }
 
         toReference.setValue(chatMessage)
-
+//      ბოლო მესიჯების ცალკე გამოყოფა ბაზაში
         val latestMessageRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
         latestMessageRef.setValue(chatMessage)
 

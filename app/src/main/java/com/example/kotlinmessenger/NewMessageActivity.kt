@@ -24,7 +24,7 @@ class NewMessageActivity : AppCompatActivity() {
         supportActionBar?.title = "Select User"
         fetchUsers()
     }
-
+// ეს რას აკეთებს ცოტა ვერ მივხვდი
     companion object {
         val USER_KEY = "USER_KEY"
     }
@@ -68,7 +68,7 @@ class NewMessageActivity : AppCompatActivity() {
 class UserItem(val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.username_textview_new_message.text = user.username
-
+//      ფოტოს ჩატვირთვა
         Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.imageview_new_message)
     }
 

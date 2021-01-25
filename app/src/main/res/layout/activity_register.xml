@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectphoto_button_register" />
+        app:layout_constraintTop_toBottomOf="@+id/selectphoto_button" />
 
     <EditText
         android:id="@+id/email_edittext_register"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email_edittext_register" />
 
     <Button
-        android:id="@+id/register_button_register"
+        android:id="@+id/register_button"
         android:layout_width="245dp"
         android:layout_height="50dp"
         android:background="#494C43"
@@ -77,13 +77,13 @@
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/register_button_register"
+        app:layout_constraintEnd_toEndOf="@+id/register_button"
         app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/register_button_register"
-        app:layout_constraintTop_toBottomOf="@+id/register_button_register" />
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
     <Button
-        android:id="@+id/selectphoto_button_register"
+        android:id="@+id/selectphoto_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
