@@ -4,6 +4,21 @@
 FastChat is a real-time chatting application for android users, made in kotlin, which connects people from around the world. You just simply need to install and start using it.
 
 # **How it works** 
+## Sign Up ##
+On this page you will see 4 different components:
+1)Select photo button
+2)Information inputs
+3)Sign Up button
+4)Already have an account TextView
+
+## Sign In ##
+As usually, Sign In page contains 2-3 items. just mail and password inputs, and of course log in button. You need to give info, click on button and start chatting.
+
+## Main Activity ##
+This is activity, where latest messages are shown. On the top right corner of application you will see 2 nav menu items. New message, which just sends you to user choosing option and sign out.By clicking on sign out, you log out of application and go to sign in activity.
+
+## Chat Log ##
+Just simple activity with chat items. One text input and send button. When you click on send button, the text will be set to both chatlog.
 
 
 # Screenshots
