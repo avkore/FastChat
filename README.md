@@ -1,1 +1,1 @@
-![logo_fastchat](https://user-images.githubusercontent.com/73380896/106362899-cc33c880-633e-11eb-9823-655325932e4d.JPG)
+![logo_fastchat](https://user-images.githubusercontent.com/73380896/106363007-4cf2c480-633f-11eb-8453-e748b3a4ada6.png)
