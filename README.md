@@ -47,6 +47,6 @@ creators:
 2.Make your changes in a branch named something different from master, e.g. create a new branch my-pull-request.<br />
 3.Create a pull request.
 
-Creators: <br />
+# Creators: <br />
 1.Dachi Avkopashvili <br />
 2.Giorgi Abuladze
