@@ -46,3 +46,7 @@ creators:
 1.Create a fork of the main FastChat repository on GitHub. <br />
 2.Make your changes in a branch named something different from master, e.g. create a new branch my-pull-request.<br />
 3.Create a pull request.
+
+Creators:
+1.Dachi Avkopashvili
+2.Giorgi Abuladze
