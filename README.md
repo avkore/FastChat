@@ -31,10 +31,6 @@ Just simple activity with chat items. One text input and send button. When you c
 # Plans
 1.Replying and forwarding messages.<br />
 2.Voice and video messages, location sharing.<br />
-
-creators:
-1.Dachi avkopashvili
-2.Giorgi abuladze
 3.Ability to send photos, videos, documents and links. <br />
 4.Previews of attached videos, documents, links. <br />
 5.Different levels of message persistence (from strict persistence to "store until delivered" to purely ephemeral messaging).<br />
